@@ -1,3 +1,6 @@
 from django.contrib import admin
+from main.models import Step, Kurs
 
-# Register your models here.
+admin.site.register(Step)
+admin.site.register(Kurs)
+
