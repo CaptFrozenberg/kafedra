@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from django.views.generic.base import TemplateView
+from generic.mixins import StepsListMixin
 
-# Create your views here.
+class MainPageView(TemplateView, StepsListMixin):
+    template_name = 'mainpage.html'
+
+
