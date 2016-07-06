@@ -14,9 +14,17 @@ class Kurs(models.Model):
     number = models.IntegerField(unique=True, verbose_name='Курс')
     # description = models.TextField()
     step = models.ForeignKey(Step, null=False, blank=False)
+    # document_folder
 
 class Subject(models.Model):
     name = models.CharField(max_length=50, unique=True, verbose_name='Название предмета')
     description = models.TextField(verbose_name= 'Описание предмета')
+
+class Document(models.Model):
+    name = models.CharField(max_length=50, unique=True, verbose_name='Документ')
+    description = models.TextField()
+    file = models.FileField(upload_to='docs')
+
+
 
 
