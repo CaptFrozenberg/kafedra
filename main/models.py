@@ -24,6 +24,7 @@ class Subject(models.Model):
 class Document(models.Model):
     subject = models.CharField(max_length=50, verbose_name='Предмет')
 
+
     name = models.CharField(max_length=50, unique=True, verbose_name='Документ')
     description = models.TextField()
     file = models.FileField(upload_to='docs')
