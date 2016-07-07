@@ -1,45 +1,194 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load staticfiles %}
 {% block additional_css %}
-  <link type="text/css" href="{% static "main.css" %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<link rel="stylesheet" href="{% static 'css/fa-min.css' %}">
 {% endblock %}
-{% block content %}
-  <div id="header">
-    <h1>Кафедра Корпоративных Информационных систем</h1>
-  </div>
-  <div id="leftmenu">
-    <ul>
-      {% url "main" as page_url %}
-      <li><a href="{{ page_url }}"{% if page_url == current_url %} class="current"{% endif %}>Главная</a></li>
-      {% for object in categories %}
-        {% url "goods_index" pk=object.pk as page_url %}
-        <li{% if forloop.first %} class="indented"{% endif %}><a href="{{ page_url }}"{% if page_url == current_url %} class="current"{% endif %}>{{ object.name }}</a></li>
-      {% endfor %}
-      {% url "news_index" as page_url %}
-      <li class="indented"><a href="{{ page_url }}"{% if page_url == current_url %} class="current"{% endif %}>Новости</a></li>
-      {% url "blog_index" as page_url %}
-      <li><a href="{{ page_url }}"{% if page_url == current_url %} class="current"{% endif %}>Мероприятия</a></li>
-      {% url "guestbook" as page_url %}
-      <li><a href="{{ page_url }}"{% if page_url == current_url %} class="current"{% endif %}>Сертификаты</a></li>
-      {% url "contacts" as page_url %}
-      <li class="indented"><a href="{{ page_url }}"{% if page_url == current_url %} class="current"{% endif %}>Контакты</a></li>
-      {% url "howtobuy" as page_url %}
-      <li><a href="{{ page_url }}"{% if page_url == current_url %} class="current"{% endif %}>Оплата</a></li>
-      {% url "about" as page_url %}
-      <li><a href="{{ page_url }}"{% if page_url == current_url %} class="current"{% endif %}>О нас</a></li>
-      {% if user.is_authenticated %}
-        {% url "categories_edit" as page_url %}
-        <li class="indented"><a href="{{ page_url }}"{% if page_url == current_url %} class="current"{% endif %}>Этапы обучения</a></li>
-        <li><a href="/admin/">Админка</a></li>
-        <li class="indented"><a href="{% url "logout" %}">Выйти</a></li>
-      {% endif %}
-    </ul>
-  </div>
-  <div id="main">
-    {% block main %}
-    {% endblock %}
-  </div>
-  <div id="footer">
-    <p>Все права принадлежат разработчикам сайта.</p>
-  </div>
+{% block content %}	
+	<!-- Header bar -->
+	<div id="header">
+		<div id="headerbutton">
+			<button class="button">
+				<i class="fa fa-user"></i> Войти
+			</button>
+		</div>
+		<div class="inline">
+			<a href="#">
+				<img src="{% static 'images/logo_mirea.png' %}"/>
+			</a>
+		</div>
+		<div class="inline" id="headertexts">
+			<p class="header_title">
+				Кафедра корпоративных информационных систем
+			</p>
+			<a class="header_subtitle" href="http://mirea.ru">
+				Московский технологический университет
+			</a>
+		</div>
+	</div>
+
+	<!-- Big sidebar with small sidebars -->
+	<div id="bigbar">
+		<div class="sidebar">
+			<span class="sidebar_title">
+				Кафедра
+			</span>
+			<ul class="notab">
+				<li>
+					<a class="sidebar_link" href="#">
+						О кафедре
+					</a>
+				</li>
+				<li>
+					<a class="sidebar_link" href="#">
+						История кафедры
+					</a>
+				</li>
+				<li>
+					<a class="sidebar_link" href="#">
+						Материально-техническое обеспечение
+					</a>
+				</li>
+				<li>
+					<a class="sidebar_link" href="#">
+						Учебная работа
+					</a>
+				</li>
+				<li>
+					<a class="sidebar_link" href="#">
+						Научная работа
+					</a>
+				</li>
+			</ul>
+		</div>		
+		<div class="sidebar">
+			<span class="sidebar_title">
+				Бакалаврам
+			</span>
+			<ul class="notab">
+				<li>
+					<b>Первый курс:</b>
+					<ul>
+						<li>
+							<a class="sidebar_link" href="#">
+								Программирование
+							</a>
+						</li>
+						<li>
+							<a class="sidebar_link" href="#">
+								Информационные технологии
+							</a>
+						</li>
+						<li>
+							<a class="sidebar_link" href="#">
+								Дискретная математика
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<b>Второй курс:</b>
+					<ul>
+						<li>
+							<a class="sidebar_link" href="#">
+								Программирование
+							</a>
+						</li>
+						<li>
+							<a class="sidebar_link" href="#">
+								Информационные технологии
+							</a>
+						</li>
+						<li>
+							<a class="sidebar_link" href="#">
+								Дискретная математика
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<b>Третий курс:</b>
+					<ul>
+						<li>
+							<a class="sidebar_link" href="#">
+								Программирование
+							</a>
+						</li>
+						<li>
+							<a class="sidebar_link" href="#">
+								Информационные технологии
+							</a>
+						</li>
+						<li>
+							<a class="sidebar_link" href="#">
+								Дискретная математика
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<b>Четвёртый курс:</b>
+					<ul>
+						<li>
+							<a class="sidebar_link" href="#">
+								Программирование
+							</a>
+						</li>
+						<li>
+							<a class="sidebar_link" href="#">
+								Информационные технологии
+							</a>
+						</li>
+						<li>
+							<a class="sidebar_link" href="#">
+								Дискретная математика
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>	
+		<div class="sidebar">
+			<span class="sidebar_title">
+				Магистрам
+			</span>
+			<ul class="notab">
+				<li>
+					<a class="sidebar_link" href="#">
+						Программирование
+					</a>
+				</li>
+				<li>
+					<a class="sidebar_link" href="#">
+						Информационные технологии
+					</a>
+				</li>
+				<li>
+					<a class="sidebar_link" href="#">
+						Дискретная математика
+					</a>
+				</li>
+				<li>
+					<a class="sidebar_link" href="#">
+						Какой-нибудь еще предмет
+					</a>
+				</li>
+				<li>
+					<a class="sidebar_link_important" href="#">
+						Что-то важное
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+<!-- Main content of a page -->
+<div id="content">
+	{% block main %}
+	{% endblock %}
+<div id="footer">
+	<span id="legal">
+		© 2016 Кафедра "Корпоративные информационные системы" МИРЭА 
+	</span>
+</div>
 {% endblock %}

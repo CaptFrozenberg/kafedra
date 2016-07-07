@@ -1,17 +1,18 @@
 {% load staticfiles %}
-<!doctype html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link type="text/css" href="{% static "base.css" %}" rel="stylesheet">
-    {% block additional_css %}
-    {% endblock %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% block additional_css %}
+	{% endblock %}
     {% block additional_js %}
     {% endblock %}
-    <title>{% block title %}{% endblock %} :: Веник-Торг</title>
-  </head>
-  <body>
-    {% block content %}
-    {% endblock %}
-  </body>
+	<title>{% block title %}{%endblock %}Кафедра КИС</title>
+</head>
+<body>
+	{% block content %}
+	{% endblock %}	
+</body>
 </html>
