@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{% static 'css/fa-min.css' %}">
 {% endblock %}
 {% block content %}	
-	<!-- Header bar -->
+<!-- Header bar -->
 	<div id="header">
 		<div id="headerbutton">
 			<button class="button">
@@ -14,7 +14,7 @@
 		</div>
 		<div class="inline">
 			<a href="#">
-				<img src="{% static 'images/logo_mirea.png' %}"/>
+				<img src="images/logo_mirea.png"/>
 			</a>
 		</div>
 		<div class="inline" id="headertexts">
@@ -67,8 +67,29 @@
 			</span>
 			<ul class="notab">
 				<li>
-					<b>Первый курс:</b>
-					<ul>
+				<input type="checkbox" id="a" class="del"/><label for="a" class="del"><b>Первый курс</b></label><div class="unseen">
+					<ul class="sub-menu">
+						<li>
+							<a class="sidebar_link" href="#">
+								Программирование
+							</a>
+						</li>
+						<li>
+							<a class="sidebar_link" href="#">
+								Информационные технологии
+							</a>
+						</li>
+						<li>
+							<a class="sidebar_link" href="#">
+								Дискретная математика
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li>
+				<input type="checkbox" id="b" class="del"/><label for="b" class="del"><b>Второй курс</b></label><div class="unseen">
+					<ul class="sub-menu">
 						<li>
 							<a class="sidebar_link" href="#">
 								Программирование
@@ -87,8 +108,8 @@
 					</ul>
 				</li>
 				<li>
-					<b>Второй курс:</b>
-					<ul>
+				<input type="checkbox" id="c" class="del"/><label for="c" class="del"><b>Третий курс</b></label><div class="unseen">
+					<ul class="sub-menu">
 						<li>
 							<a class="sidebar_link" href="#">
 								Программирование
@@ -107,28 +128,8 @@
 					</ul>
 				</li>
 				<li>
-					<b>Третий курс:</b>
-					<ul>
-						<li>
-							<a class="sidebar_link" href="#">
-								Программирование
-							</a>
-						</li>
-						<li>
-							<a class="sidebar_link" href="#">
-								Информационные технологии
-							</a>
-						</li>
-						<li>
-							<a class="sidebar_link" href="#">
-								Дискретная математика
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<b>Четвёртый курс:</b>
-					<ul>
+				<input type="checkbox" id="d" class="del"/><label for="d" class="del"><b>Четвертый курс</b></label><div class="unseen">
+					<ul class="sub-menu">
 						<li>
 							<a class="sidebar_link" href="#">
 								Программирование
@@ -147,6 +148,7 @@
 					</ul>
 				</li>
 			</ul>
+			
 		</div>	
 		<div class="sidebar">
 			<span class="sidebar_title">

@@ -38,10 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'django_comments',
-    'easy_thumbnails',
-    #'taggit',
-    #'precise_bbcode',
     'main',
 ]
 
