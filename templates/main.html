@@ -14,7 +14,7 @@
 		</div>
 		<div class="inline">
 			<a href="#">
-				<img src="images/logo_mirea.png"/>
+				<img src="{% static 'images/logo_mirea.png' %}"/>
 			</a>
 		</div>
 		<div class="inline" id="headertexts">
@@ -31,6 +31,7 @@
 	<div id="bigbar">
 		<div class="sidebar">
 			<span class="sidebar_title">
+				<i class="fa fa-briefcase" id="sidebaricon"> </i>
 				Кафедра
 			</span>
 			<ul class="notab">
@@ -63,6 +64,7 @@
 		</div>		
 		<div class="sidebar">
 			<span class="sidebar_title">
+				<i class="fa fa-file" id="sidebaricon"> </i>
 				Бакалаврам
 			</span>
 			<ul class="notab">
@@ -180,6 +182,7 @@
 		</div>	
 		<div class="sidebar">
 			<span class="sidebar_title">
+				<i class="fa fa-file" id="sidebaricon"> </i>
 				Магистрам
 			</span>
 			<ul class="notab">
@@ -216,6 +219,7 @@
 <div id="content">
 	{% block main %}
 	{% endblock %}
+</div>
 <div id="footer">
 	<span id="legal">
 		© 2016 Кафедра "Корпоративные информационные системы" МИРЭА 
