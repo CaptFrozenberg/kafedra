@@ -15,5 +15,5 @@ class SubjectView(TemplateView, DocListMixin):
             pass
     def get_context_data(self, **kwargs):
         context = super(SubjectView, self).get_context_data(**kwargs)
-        context['docs'] = Document.objects.filter(subject=self.subject)
+        context['docs'] = Document.objects.filter(subject__name=self.subject)
         return context

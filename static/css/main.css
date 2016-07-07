@@ -58,7 +58,7 @@ h1 {
 }
 
 ul {
-	padding-left: 25px;
+	padding-left: 15px;
 }
 
 /* DEFINITIONS FOR IDS */
@@ -105,7 +105,6 @@ ul {
 	position: relative;
 	left: 40px;
 	top: -10px;
-	text-align: justify;
 
 }
 
@@ -115,6 +114,8 @@ ul {
 	padding-top: 10px;
 	position: relative;
 	top: 80px;
+
+
 }
 
 #legal {
@@ -173,7 +174,6 @@ ul {
 
 .sidebar_link {
 	border-bottom: 1px solid #d4e5f0;
-	font-size: 14px;
 }
 
 .sidebar_link_important {
@@ -184,19 +184,69 @@ ul {
 .del { 
    display: none;
  }
- 
-.del:not(:checked) + label + * { 
-	display: none; 
-	}
-
+.del:not(:checked) + label + * { display: none; }
 .del:not(:checked) + label,
 .del:checked + label {
-	display: block;
-	cursor: pointer;
-	padding: 5px;
+display: block;
+cursor: pointer;
+background-color: white;
+padding: 5px;
 }
 
 .sub-menu li {
 	font-size: 15px;
 
 }
+
+.subject {
+	font-size: 30px;
+	text-align: center;
+}
+
+.docs {
+	text-align: center;
+	font-weight: normal;
+	margin-top: -20px;
+}
+
+.wrap {
+	padding: 10px;
+	border: 1px solid gray;
+	background-color: #f5f5f5;
+	max-height: 100px;
+	margin-bottom: 20px;
+}
+
+.word img, .pdf img {
+	width: 80px;
+	position: relative;
+}
+
+.word p {
+	font-size: 15px;
+	position: relative;
+	left: 90px;
+	top: -120px;
+}
+
+.pdf p {
+	font-size: 15px;
+	position: relative;
+	left: 90px;
+	top: -100px;
+}
+
+a.button {
+  color: #fff; 
+  text-decoration: none; 
+  user-select: none; 
+  background: #6495ed;
+  padding: .7em 1.5em; 
+  outline: none; 
+  margin-left: 560px;
+  position: relative;
+  bottom: 110px;
+
+} 
+a.button:hover { background: #5d76cb; } 
+a.button:active { background: #42aaff; } 

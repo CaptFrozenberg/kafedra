@@ -1,34 +1,11 @@
 from django.db import models
-
-STEPS = (
-    (1, 'Бакалавриат'),
-    (2, 'Магистратура'),
-    (3, 'Аспирантура')
-)
-
-class Step(models.Model):
-    name = models.CharField(max_length=50, unique=True, verbose_name='Этап обучения')
-    description = models.TextField()
-
-class Kurs(models.Model):
-    number = models.IntegerField(unique=True, verbose_name='Курс')
-    # description = models.TextField()
-    step = models.ForeignKey(Step, null=False, blank=False)
-    # document_folder
-
+# сделать загрузку вариантов предметов из моделей предметов
 class Subject(models.Model):
     name = models.CharField(max_length=50, unique=True, verbose_name='Название предмета')
-
-    description = models.TextField(verbose_name= 'Описание предмета')
+    #index = models.AutoField(unique=True)
 
 class Document(models.Model):
-    subject = models.CharField(max_length=50, verbose_name='Предмет')
-
-
-    name = models.CharField(max_length=50, unique=True, verbose_name='Документ')
+    name = models.CharField(max_length=50, unique=True, verbose_name='Документ', primary_key=True)
+    subject = models.ForeignKey(Subject, verbose_name='Предмет')
     description = models.TextField()
     file = models.FileField(upload_to='docs')
-
-
-
-

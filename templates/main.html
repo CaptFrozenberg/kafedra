@@ -80,8 +80,9 @@
 							</a>
 						</li>
 						<li>
-							<a class="sidebar_link" href="#">
-								Информационные технологии
+							{% url "main" as page_url %}
+							<a class="sidebar_link" href="{{ page_url }}/informatika">
+								Информатика
 							</a>
 						</li>
 						<li>
