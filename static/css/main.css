@@ -47,7 +47,7 @@ button:active {
 
 li {
 	list-style: none;
-	padding: 2px 0;
+	padding: 3px 0;
 	font-size: 14px;
 }
 
@@ -183,17 +183,29 @@ ul {
 
 .del { 
    display: none;
- }
+}
  
 .del:not(:checked) + label + * { 
 	display: none; 
-	}
+}
 
 .del:not(:checked) + label,
 .del:checked + label {
 	display: block;
 	cursor: pointer;
-	padding: 5px;
+	padding: 5px 0px;
+}
+
+.del + label > i {
+	width: 10px;
+}
+
+.del:checked + label > i#closed {
+	display: none;
+}
+
+.del:not(:checked) + label > i#opened {
+	display: none;
 }
 
 .sub-menu li {
