@@ -9,12 +9,13 @@
 	<div id="header">
 		<div id="headerbutton">
 			<button class="button">
-				<i class="fa fa-user"></i> Войти
+				<i class="fa fa-user"></i> 
+				Войти
 			</button>
 		</div>
 		<div class="inline">
 			<a href="#">
-				<img src="images/logo_mirea.png"/>
+				<img src="{% static 'images/logo_mirea.png' %}"/>
 			</a>
 		</div>
 		<div class="inline" id="headertexts">
@@ -31,6 +32,7 @@
 	<div id="bigbar">
 		<div class="sidebar">
 			<span class="sidebar_title">
+				<i class="fa fa-briefcase" id="sidebaricon"> </i>
 				Кафедра
 			</span>
 			<ul class="notab">
@@ -63,116 +65,125 @@
 		</div>		
 		<div class="sidebar">
 			<span class="sidebar_title">
+				<i class="fa fa-file" id="sidebaricon"> </i>
 				Бакалаврам
 			</span>
 			<ul class="notab">
 				<li>
 					<input type="checkbox" id="a" class="del"/>
 					<label for="a" class="del">
-						<i class="fa fa-angle-right"> </i>
-						<b>Первый курс</b>
+						<i class="del fa fa-angle-right" id="closed"> </i>
+						<i class="del fa fa-angle-down" id="opened"> </i>
+						<b><a>Первый курс</a></b>
 					</label>
-				<div class="unseen">
-					<ul class="sub-menu">
-						<li>
-							<a class="sidebar_link" href="#">
-								Программирование
-							</a>
-						</li>
-						<li>
-							{% url "main" as page_url %}
-							<a class="sidebar_link" href="{{ page_url }}/informatika">
-								Информатика
-							</a>
-						</li>
-						<li>
-							<a class="sidebar_link" href="#">
-								Дискретная математика
-							</a>
-						</li>
-					</ul>
+					<div class="unseen">
+						<ul class="sub-menu">
+							<li>
+								<a class="sidebar_link" href="#">
+									Программирование
+								</a>
+							</li>
+							<li>
+								<a class="sidebar_link" href="#">
+									Информационные технологии
+								</a>
+							</li>
+							<li>
+								<a class="sidebar_link" href="#">
+									Дискретная математика
+								</a>
+							</li>
+						</ul>
+					</div>
 				</li>
 
 				<li>
 					<input type="checkbox" id="b" class="del"/>
 					<label for="b" class="del">
-						<i class="fa fa-angle-right"> </i>
-						<b> Второй курс</b>
+						<i class="del fa fa-angle-right" id="closed"> </i>
+						<i class="del fa fa-angle-down" id="opened"> </i>
+						<b><a>Второй курс</a></b>
 					</label>
-				<div class="unseen">
-					<ul class="sub-menu">
-						<li>
-							<a class="sidebar_link" href="#">
-								Программирование
-							</a>
-						</li>
-						<li>
-							<a class="sidebar_link" href="#">
-								Информационные технологии
-							</a>
-						</li>
-						<li>
-							<a class="sidebar_link" href="#">
-								Дискретная математика
-							</a>
-						</li>
-					</ul>
+					<div class="unseen">
+						<ul class="sub-menu">
+							<li>
+								<a class="sidebar_link" href="#">
+									Программирование
+								</a>
+							</li>
+							<li>
+								<a class="sidebar_link" href="#">
+									Информационные технологии
+								</a>
+							</li>
+							<li>
+								<a class="sidebar_link" href="#">
+									Дискретная математика
+								</a>
+							</li>
+						</ul>
+					</div>
 				</li>
 				<li>
 				<input type="checkbox" id="c" class="del"/>
-					<label for="c" class="del">
-						<i class="fa fa-angle-right"> </i>
-						<b>Третий курс</b>
+					<label for="c" class="del ">
+						<i class="del fa fa-angle-right" id="closed"> </i>
+						<i class="del fa fa-angle-down" id="opened"> </i>
+						<b><a>Третий курс</a></b>
 					</label>
-				<div class="unseen">
-					<ul class="sub-menu">
-						<li>
-							<a class="sidebar_link" href="#">
-								Программирование
-							</a>
-						</li>
-						<li>
-							<a class="sidebar_link" href="#">
-								Информационные технологии
-							</a>
-						</li>
-						<li>
-							<a class="sidebar_link" href="#">
-								Дискретная математика
-							</a>
-						</li>
-					</ul>
+					<div class="unseen">
+						<ul class="sub-menu">
+							<li>
+								<a class="sidebar_link" href="#">
+									Программирование
+								</a>
+							</li>
+							<li>
+								<a class="sidebar_link" href="#">
+									Информационные технологии
+								</a>
+							</li>
+							<li>
+								<a class="sidebar_link" href="#">
+									Дискретная математика
+								</a>
+							</li>
+						</ul>
+					</div>
 				</li>
 				<li>
 				<input type="checkbox" id="d" class="del"/>
 					<label for="d" class="del">
-						<i class="fa fa-angle-right"> </i>
-						<b>Четвертый курс</b>
+						<i class="del fa fa-angle-right" id="closed"> </i>
+						<i class="del fa fa-angle-down" id="opened"> </i>
+						<b><a>Четвертый курс</a></b>
 					</label>
-				<div class="unseen">
-					<ul class="sub-menu">
-						<li>
-							<a class="sidebar_link" href="#">
-								Программирование
-							</a>
-						</li>
-						<li>
-							<a class="sidebar_link" href="#">
-								Информационные технологии
-							</a>
-						</li>
-						<li>
-							<a class="sidebar_link" href="#">
-								Дискретная математика
-							</a>
-						</li>
-					</ul>
+					<div class="unseen">
+						<ul class="sub-menu">
+							<li>
+								<a class="sidebar_link" href="#">
+									Программирование
+								</a>
+							</li>
+							<li>
+								<a class="sidebar_link" href="#">
+									Информационные технологии
+								</a>
+							</li>
+							<li>
+								<a class="sidebar_link" href="#">
+									Дискретная математика
+								</a>
+							</li>
+						</ul>
+					</div>
 				</li>
 			</ul>
 			
 		</div>	
 		<div class="sidebar">
 			<span class="sidebar_title">
+				<i class="fa fa-file" id="sidebaricon"> </i>
 				Магистрам
 			</span>
 			<ul class="notab">
@@ -209,6 +220,7 @@
 <div id="content">
 	{% block main %}
 	{% endblock %}
+</div>
 <div id="footer">
 	<span id="legal">
 		© 2016 Кафедра "Корпоративные информационные системы" МИРЭА 

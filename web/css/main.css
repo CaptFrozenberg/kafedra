@@ -1,6 +1,11 @@
 
 /* GLOBAL DEFINITIONS */
 
+html {
+	height: 100%;
+	width: 100%;
+}
+
 body {
 	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', 
 	'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
@@ -8,7 +13,6 @@ body {
 	height: 100%;
 	display: block;
 	margin: auto;
-	min-width: 1100px;
 }
 
 a {
@@ -37,19 +41,17 @@ button {
 
 button:hover {
 	color: #fff;
-	background: #0169b2;
-	cursor: pointer;
+	background: #0169b2
 }
 
 button:active {
 	color: #0169b2;
-	background: #fff;
-	cursor: pointer;
+	background: #fff
 }
 
 li {
 	list-style: none;
-	padding: 3px 0;
+	padding: 2px 0;
 	font-size: 14px;
 }
 
@@ -60,7 +62,7 @@ h1 {
 }
 
 ul {
-	padding-left: 25px;
+	padding-left: 15px;
 }
 
 /* DEFINITIONS FOR IDS */
@@ -96,7 +98,6 @@ ul {
 #bigbar {
 	width: 250px;
 	display: inline-block;
-
 }
 
 #content {
@@ -104,31 +105,17 @@ ul {
 	display: inline-block;
 	vertical-align: top;
 	margin: 20px 10px;
-	position: relative;
-	left: 40px;
-	top: -10px;
-	text-align: justify;
-
 }
 
 #footer {
 	height: 100px;
 	border-top: 1px solid #cecece;
 	padding-top: 10px;
-	position: relative;
-	top: 80px;
 }
 
 #legal {
 	color: #aeaeae;
 	font-size: 13px;
-}
-
-#sidebaricon {
-	color: #0169b2;
-	opacity: 0.5;
-	font-size: 16px;
-	width: 20px;
 }
 
 /* DEFINITIONS FOR CLASSES */
@@ -164,12 +151,11 @@ ul {
 }
 
 .sidebar {
-	margin: 20px 0;
+	margin: 20px 0px;
 	padding: 10px;
 	background: #f6f6f6;
 	color: #0169b2;
 	border-top: 1px solid #0169b2;
-	max-width: 230px;
 }
 
 .sidebar_title {
@@ -182,42 +168,9 @@ ul {
 
 .sidebar_link {
 	border-bottom: 1px solid #d4e5f0;
-	font-size: 14px;
 }
 
 .sidebar_link_important {
 	border-bottom: 1px solid red;
 	color: red;
-}
-
-.del { 
-   display: none;
-}
- 
-.del:not(:checked) + label + * { 
-	display: none; 
-}
-
-.del:not(:checked) + label,
-.del:checked + label {
-	display: block;
-	cursor: pointer;
-	padding: 5px 0px;
-}
-
-.del + label > i {
-	width: 10px;
-}
-
-.del:checked + label > i#closed {
-	display: none;
-}
-
-.del:not(:checked) + label > i#opened {
-	display: none;
-}
-
-.sub-menu li {
-	font-size: 15px;
-
 }
