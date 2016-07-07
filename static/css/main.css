@@ -58,7 +58,7 @@ h1 {
 }
 
 ul {
-	padding-left: 15px;
+	padding-left: 25px;
 }
 
 /* DEFINITIONS FOR IDS */
@@ -173,6 +173,7 @@ ul {
 
 .sidebar_link {
 	border-bottom: 1px solid #d4e5f0;
+	font-size: 14px;
 }
 
 .sidebar_link_important {
@@ -183,13 +184,16 @@ ul {
 .del { 
    display: none;
  }
-.del:not(:checked) + label + * { display: none; }
+ 
+.del:not(:checked) + label + * { 
+	display: none; 
+	}
+
 .del:not(:checked) + label,
 .del:checked + label {
-display: block;
-cursor: pointer;
-background-color: white;
-padding: 5px;
+	display: block;
+	cursor: pointer;
+	padding: 5px;
 }
 
 .sub-menu li {
