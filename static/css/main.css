@@ -190,6 +190,10 @@ ul {
 	color: red;
 }
 
+.sub-menu li {
+	font-size: 15px;
+}
+
 .del { 
    display: none;
 }
@@ -217,7 +221,26 @@ ul {
 	display: none;
 }
 
-.sub-menu li {
-	font-size: 15px;
+.wrap {
+	position: relative;
+	display: block;
+	height: 100px;
+	background: #f6f6f6;
+	padding: 15px 0;
+	border-radius: 10px;
+}
 
+.wrap > a {
+	bottom: 15px;
+	right: 15px;
+	position: absolute;
+}
+
+.wrap > p {
+	text-align: top;
+	float: top;
+}
+
+.wrap > img {
+	opacity: 0.75;
 }
