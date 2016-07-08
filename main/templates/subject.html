@@ -1,22 +1,50 @@
 {% extends 'main.html' %}
 {% block main %}
-		<h1 class="subject">
-			ИНФОРМАТИКА
-		</h1>
-
-
-	<!--ИНФОРМАЦИЯ О ПРЕДМЕТЕ -->
-
-		<h3 class="docs">
-			Документы
-		</h3>
-		
-	<!-- Slightly modified file displaying format -->
+	<h1>
+		Информационные технологии
+	</h1>
 	<span class="word wrap">
 		<img src="static/images/word.png" height="100" class="inline" />
 		<p class="inline">
 			<b>
 				Информационные технологии. Лабораторные, первый семестр
+			</b>
+			<br>
+				5 лабораторных работ для первого курса факультета ИТ.
+			<br>
+			<br>
+				Автор: Башлыкова А.А.
+		</p>
+		<a href="#" class="inline">
+			<button class="button">
+				<i class="fa fa-download"> </i> 
+				Скачать
+			</button>
+		</a>
+	</span>
+	<span class="word wrap">
+		<img src="static/images/word.png" height="100" class="inline" />
+		<p class="inline">
+			<b>
+				Информационные технологии. Лабораторные, второй семестр
+			</b>
+			<br>
+				7 лабораторных работ для первого курса факультета ИТ.
+			<br>
+				Автор: Башлыкова А.А.
+		</p>
+		<a href="#" class="inline">
+			<button class="button">
+				<i class="fa fa-download"> </i> 
+				Скачать
+			</button>
+		</a>
+	</span>	
+	<span class="pdf wrap">
+		<img src="static/images/pdf.png" height="100" class="inline" />
+		<p class="inline">
+			<b>
+				Типовой расчёт. Первый семестр
 			</b>
 			<br>
 				Автор: Башлыкова А.А.
@@ -28,26 +56,4 @@
 			</button>
 		</a>
 	</span>
-	
-	<div class="wrap">		
-		<span class="word">
-			<img src="images/word.png">
-			<p>
-				"Название документа"
-				<br>
-				Автор: Васильева А.А.
-			</p>
-			<a href="#" class="button"/>Скачать</a>
-		</span>
-	</div>
-	<div class="wrap">
-		<span class="pdf">
-			<img src="images/pdf.png">
-			<p>"Название документа"<br>
-			Автор: Воронков В.Д.
-			</p>
-			<a href="#" class="button"/>Скачать</a>
-		</span>
-
-	</div>
 {% endblock %}
