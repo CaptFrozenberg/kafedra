@@ -168,7 +168,7 @@ ul {
 	padding: 10px;
 	background: #f6f6f6;
 	color: #0169b2;
-	border-top: 1px solid #0169b2;
+	border-top: 2px solid rgba(1, 105, 178, 0.5);
 	max-width: 230px;
 }
 
