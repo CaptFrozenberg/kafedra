@@ -27,23 +27,21 @@ a:active {
 button {
 	display: block;
 	position: relative;
-	border: 1px solid #0169b2;
+	border: none;
 	border-radius: 4px;
-	color: #0169b2;
+	color: #fff;
 	font-size: 14px;
-	padding: 6px 12px;
-	background: #fff
+	padding: 8px 14px;
+	background: rgba(1, 105, 178, 0.5);
 }
 
 button:hover {
-	color: #fff;
-	background: #0169b2;
+	background: rgba(1, 105, 178, 0.7);
 	cursor: pointer;
 }
 
 button:active {
-	color: #0169b2;
-	background: #fff;
+	background: rgba(1, 105, 178, 1);
 	cursor: pointer;
 }
 
@@ -96,7 +94,6 @@ ul {
 #bigbar {
 	width: 250px;
 	display: inline-block;
-
 }
 
 #content {
@@ -168,7 +165,7 @@ ul {
 	padding: 10px;
 	background: #f6f6f6;
 	color: #0169b2;
-	border-top: 1px solid #0169b2;
+	border-top: 2px solid rgba(1, 105, 178, 0.5);
 	max-width: 230px;
 }
 
@@ -188,6 +185,10 @@ ul {
 .sidebar_link_important {
 	border-bottom: 1px solid red;
 	color: red;
+}
+
+.sub-menu li {
+	font-size: 15px;
 }
 
 .del { 
@@ -217,7 +218,51 @@ ul {
 	display: none;
 }
 
-.sub-menu li {
-	font-size: 15px;
+.del:hover > b {
+	color: #439FF0;
+}
 
+.del:active > b {
+	color: #1D4C75;
+}
+
+.wrap {
+	position: relative;
+	display: block;
+	height: 100px;
+	background: #f6f6f6;
+	padding: 15px 0;
+	border-radius: 10px;
+	margin: 10px 0;
+}
+
+.wrap > a {
+	bottom: 15px;
+	right: 15px;
+	position: absolute;
+}
+
+.wrap > p {
+	margin: 0px;
+}
+
+.wrap > img {
+	opacity: 0.75;
+}
+
+.emptybutton {
+	border: 1px solid rgba(1, 105, 178, 1);
+	padding: 6px 12px;
+	background: #fff;
+	color: rgba(1, 105, 178, 1);
+}
+
+.emptybutton:hover {
+	color: #fff;
+	background-color: rgba(1, 105, 178, 1);
+}
+
+.emptybutton:active {
+	color: #fff;
+	background-color: rgba(1, 105, 178, 1);
 }
