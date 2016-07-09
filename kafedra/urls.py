@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^login/', login, name= 'login'),
     url(r'^logout/', logout, name = 'logout'),
 
-    url(r'^$', include('main.urls')),
+    url(r'^', include('main.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
