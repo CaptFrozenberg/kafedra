@@ -36,27 +36,27 @@
 				Кафедра
 			</span>
 			<ul class="notab">
-				<li>
+				<li class="sideli">
 					<a class="sidebar_link" href="#">
 						О кафедре
 					</a>
 				</li>
-				<li>
+				<li class="sideli">
 					<a class="sidebar_link" href="#">
 						История кафедры
 					</a>
 				</li>
-				<li>
+				<li class="sideli">
 					<a class="sidebar_link" href="#">
 						Материально-техническое обеспечение
 					</a>
 				</li>
-				<li>
+				<li class="sideli">
 					<a class="sidebar_link" href="#">
 						Учебная работа
 					</a>
 				</li>
-				<li>
+				<li class="sideli">
 					<a class="sidebar_link" href="#">
 						Научная работа
 					</a>
@@ -71,7 +71,7 @@
 			<ul class="notab">
 			{% for i in kurses %}
 				
-				<li>
+				<li class="sideli">
 					<input type="checkbox" id="{% cycle 'a' 'b' 'c' 'd' %}" class="del"/>
 					<label for="{% cycle 'a' 'b' 'c' 'd' %}" class="del">
 						<i class="del fa fa-angle-right" id="closed"> </i>
@@ -83,7 +83,7 @@
 						<ul class="sub-menu">
 						<!-- {% cycle subjects_1_kurs subjects_2_kurs subjects_3_kurs subjects_4_kurs as subjects %} -->					
 						{% for subject in subjects %}
-							<li>
+							<li class="sideli">
 								<a class="sidebar_link" href="{% url 'subject_name' subject=subject.code_name %}">
 									{{ subject.name }}
 								</a>
@@ -104,27 +104,27 @@
 			</span>
 			<ul class="notab">
 			
-				<li>
+				<li class="sideli">
 					<a class="sidebar_link" href="#">
 						Программирование
 					</a>
 				</li>
-				<li>
+				<li class="sideli">
 					<a class="sidebar_link" href="#">
 						Информационные технологии
 					</a>
 				</li>
-				<li>
+				<li class="sideli">
 					<a class="sidebar_link" href="#">
 						Дискретная математика
 					</a>
 				</li>
-				<li>
+				<li class="sideli">
 					<a class="sidebar_link" href="#">
 						Какой-нибудь еще предмет
 					</a>
 				</li>
-				<li>
+				<li class="sideli">
 					<a class="sidebar_link_important" href="#">
 						Что-то важное
 					</a>

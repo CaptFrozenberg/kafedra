@@ -4,8 +4,8 @@
 	<h1>
 		{{ subject_name }}
 	</h1>
+	{% for doc in docs %}
 	<span class="word wrap">
-		{% for doc in docs %}
 		<img src="{% static 'images/word.png' %}" height="100" class="inline" />
 		<p class="inline">
 			<b>
@@ -24,6 +24,7 @@
 			</button>
 		</a>
 	</span>
+	{% endfor %}
 	<span class="word wrap">
 		<img src="{% static 'images/word.png' %}" height="100" class="inline" />
 		<p class="inline">
