@@ -21,14 +21,14 @@ class SubjectView(TemplateView, DocListMixin):
             pass
         return super(SubjectView, self).get(request, *args, **kwargs)
 
-    # def get_context_data(self, **kwargs):
-    #     print(self.request.path)
-    #     self.subject_codename = self.request.path.split('/')[-1]
-    #     print(self.subject_codename)
-    #     #self.subject = self.request.GET['subject']
-    #     context = super(SubjectView, self).get_context_data(**kwargs)
-    #     subject = Subject.objects.get(code_name=self.subject_codename)
-    #     context['subject_name'] = subject.name
-    #     context['docs'] = Document.objects.filter(subject__name=self.subject_codename)
-    #
-    #     return context
+    def get_context_data(self, **kwargs):
+        print('sghxfghfxghfghfghghfghfghfghfghfghfthfhthdvbdfgxcbvthxvcsrgf')
+        #self.subject_codename = self.request.path.split('/')[-1]
+        self.subject_codename = self.kwargs['subject']
+        context = super(SubjectView, self).get_context_data(**kwargs)
+        subject = Subject.objects.get(code_name=self.subject_codename)
+        context['subject_name'] = subject.name
+        #context['subject_name'] = 'Получилось'
+        context['docs'] = Document.objects.filter(subject__name=self.subject_codename)
+
+        return context
