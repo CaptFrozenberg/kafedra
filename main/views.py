@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
-from generic.mixins import StepsListMixin, DocListMixin
+from generic.mixins import SubjectListMixin, DocListMixin
 from main.models import Document, Subject
 
-class MainPageView(TemplateView, StepsListMixin):
+class MainPageView(TemplateView, SubjectListMixin):
     template_name = 'mainpage.html'
 
-class SubjectView(TemplateView, DocListMixin):
+class SubjectView(TemplateView, SubjectListMixin):
     template_name = 'subject.html'
 
     def get_queryset(self):
@@ -28,7 +28,6 @@ class SubjectView(TemplateView, DocListMixin):
         context = super(SubjectView, self).get_context_data(**kwargs)
         subject = Subject.objects.get(code_name=self.subject_codename)
         context['subject_name'] = subject.name
-        #context['subject_name'] = 'Получилось'
         context['docs'] = Document.objects.filter(subject__name=self.subject_codename)
 
         return context

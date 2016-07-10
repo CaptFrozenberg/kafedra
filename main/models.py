@@ -3,6 +3,8 @@ from django.db import models
 class Subject(models.Model):
     name = models.CharField(max_length=50, unique=True, verbose_name='Название предмета')
     code_name = models.SlugField(max_length=20, unique=True, verbose_name='URL префикс')
+    magistratura = models.BooleanField(verbose_name='Магистратура', default=False)
+    kurs = models.PositiveSmallIntegerField(verbose_name='Курс', default=0)
 
     def __str__(self):
         return self.name

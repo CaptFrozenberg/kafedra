@@ -69,117 +69,32 @@
 				Бакалаврам
 			</span>
 			<ul class="notab">
+			{% for i in kurses %}
+				
 				<li>
-					<input type="checkbox" id="a" class="del"/>
-					<label for="a" class="del">
+					<input type="checkbox" id="{% cycle 'a' 'b' 'c' 'd' %}" class="del"/>
+					<label for="{% cycle 'a' 'b' 'c' 'd' %}" class="del">
 						<i class="del fa fa-angle-right" id="closed"> </i>
 						<i class="del fa fa-angle-down" id="opened"> </i>
-						<b>Первый курс</b>
-					</label>
-					<div class="unseen">
-						<ul class="sub-menu">
-							<li>
-								<a class="sidebar_link" href="{% url 'subject_name' subject='proga' %}">
 
-									Программирование
-								</a>
-							</li>
-							<li>
-								<a class="sidebar_link" href="#">
-									Информационные технологии
-								</a>
-							</li>
-							<li>
-								<a class="sidebar_link" href="#">
-									Дискретная математика
-								</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-
-				<li>
-					<input type="checkbox" id="b" class="del"/>
-					<label for="b" class="del">
-						<i class="del fa fa-angle-right" id="closed"> </i>
-						<i class="del fa fa-angle-down" id="opened"> </i>
-						<b>Второй курс</b>
+						<b> {% cycle 'Первый' 'Второй' 'Третий' 'Четвертый' %} курс</b>
 					</label>
 					<div class="unseen">
 						<ul class="sub-menu">
+						<!-- {% cycle subjects_1_kurs subjects_2_kurs subjects_3_kurs subjects_4_kurs as subjects %} -->					
+						{% for subject in subjects %}
 							<li>
-								<a class="sidebar_link" href="#">
-									Программирование
+								<a class="sidebar_link" href="{% url 'subject_name' subject=subject.code_name %}">
+									{{ subject.name }}
 								</a>
-							</li>
-							<li>
-								<a class="sidebar_link" href="#">
-									Информационные технологии
-								</a>
-							</li>
-							<li>
-								<a class="sidebar_link" href="#">
-									Дискретная математика
-								</a>
-							</li>
+							</li>						
+						{% endfor %}
 						</ul>
 					</div>
 				</li>
-				<li>
-				<input type="checkbox" id="c" class="del"/>
-					<label for="c" class="del ">
-						<i class="del fa fa-angle-right" id="closed"> </i>
-						<i class="del fa fa-angle-down" id="opened"> </i>
-						<b>Третий курс</b>
-					</label>
-					<div class="unseen">
-						<ul class="sub-menu">
-							<li>
-								<a class="sidebar_link" href="#">
-									Программирование
-								</a>
-							</li>
-							<li>
-								<a class="sidebar_link" href="#">
-									Информационные технологии
-								</a>
-							</li>
-							<li>
-								<a class="sidebar_link" href="#">
-									Дискретная математика
-								</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li>
-				<input type="checkbox" id="d" class="del"/>
-					<label for="d" class="del">
-						<i class="del fa fa-angle-right" id="closed"> </i>
-						<i class="del fa fa-angle-down" id="opened"> </i>
-						<b>Четвертый курс</b>
-					</label>
-					<div class="unseen">
-						<ul class="sub-menu">
-							<li>
-								<a class="sidebar_link" href="#">
-									Программирование
-								</a>
-							</li>
-							<li>
-								<a class="sidebar_link" href="#">
-									Информационные технологии
-								</a>
-							</li>
-							<li>
-								<a class="sidebar_link" href="#">
-									Дискретная математика
-								</a>
-							</li>
-						</ul>
-					</div>
-				</li>
+			{% endfor %}				
 			</ul>
+			
 			
 		</div>	
 		<div class="sidebar">
@@ -188,6 +103,7 @@
 				Магистрам
 			</span>
 			<ul class="notab">
+			
 				<li>
 					<a class="sidebar_link" href="#">
 						Программирование
