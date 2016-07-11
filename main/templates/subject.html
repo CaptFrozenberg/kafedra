@@ -6,23 +6,27 @@
 	</h1>
 	{% for doc in docs %}
 	<span class="word wrap">
-		<img src="{% static 'images/word.png' %}" height="100" class="inline" />
+		<img src="{% static doc.0 %}" height="100" class="inline" />
 		<p class="inline">
 			<b>
-				{{ doc.name }}
+				{{ doc.1.name }}
 			</b>
 			<br>
-				{{ doc.description }}
+				{{ doc.1.description }}
 			<br>
 			<br>
-				{{ doc.author }}
+				{{ doc.1.author }}
 		</p>
-		<a href="{{ doc.file.url }}" class="inline">
+		<a href="{{ doc.1.file.url }}" class="inline">
 			<button class="button">
 				<i class="fa fa-download"> </i> 
 				Скачать
 			</button>
 		</a>
+	</span>
+	{% empty %}
+	<span class='plaintext'>
+		К данному предмету еще не прикреплено ни одного документа.
 	</span>
 	{% endfor %}
 {% endblock %}
