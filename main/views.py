@@ -22,7 +22,6 @@ class SubjectView(TemplateView, SubjectListMixin):
         return super(SubjectView, self).get(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
-        print('sghxfghfxghfghfghghfghfghfghfghfghfthfhthdvbdfgxcbvthxvcsrgf')
         #self.subject_codename = self.request.path.split('/')[-1]
         self.subject_codename = self.kwargs['subject']
         context = super(SubjectView, self).get_context_data(**kwargs)
