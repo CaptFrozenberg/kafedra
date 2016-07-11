@@ -4,7 +4,7 @@ from generic.mixins import SubjectListMixin, DocListMixin
 from main.models import Document, Subject
 
 class MainPageView(TemplateView, SubjectListMixin):
-    template_name = 'about.html'
+    template_name = 'mainpage.html'
 
 class SubjectView(TemplateView, SubjectListMixin):
     template_name = 'subject.html'
