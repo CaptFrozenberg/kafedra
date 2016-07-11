@@ -27,6 +27,7 @@ class SubjectView(TemplateView, SubjectListMixin):
         context = super(SubjectView, self).get_context_data(**kwargs)
         subject = Subject.objects.get(code_name=self.subject_codename)
         context['subject_name'] = subject.name
-        context['docs'] = Document.objects.filter(subject__name=self.subject_codename)
-
+        context['docs'] = Document.objects.filter(subject__code_name=self.subject_codename)
+        
+        print(Document.objects.filter(subject__code_name=self.subject_codename)[0].file.name)
         return context

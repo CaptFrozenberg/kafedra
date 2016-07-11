@@ -9,15 +9,15 @@
 		<img src="{% static 'images/word.png' %}" height="100" class="inline" />
 		<p class="inline">
 			<b>
-				Информационные технологии. Лабораторные, первый семестр
+				{{ doc.name }}
 			</b>
 			<br>
-				5 лабораторных работ для первого курса факультета ИТ.
+				{{ doc.description }}
 			<br>
 			<br>
-				Автор: Башлыкова А.А.
+				{{ doc.author }}
 		</p>
-		<a href="#" class="inline">
+		<a href="{{ doc.file.url }}" class="inline">
 			<button class="button">
 				<i class="fa fa-download"> </i> 
 				Скачать
@@ -25,38 +25,4 @@
 		</a>
 	</span>
 	{% endfor %}
-	<span class="word wrap">
-		<img src="{% static 'images/word.png' %}" height="100" class="inline" />
-		<p class="inline">
-			<b>
-				Информационные технологии. Лабораторные, второй семестр
-			</b>
-			<br>
-				7 лабораторных работ для первого курса факультета ИТ.
-			<br>
-				Автор: Башлыкова А.А.
-		</p>
-		<a href="#" class="inline">
-			<button class="button">
-				<i class="fa fa-download"> </i> 
-				Скачать
-			</button>
-		</a>
-	</span>	
-	<span class="pdf wrap">
-		<img src="{% static 'images/pdf.png' %} " height="100" class="inline" />
-		<p class="inline">
-			<b>
-				Типовой расчёт. Первый семестр
-			</b>
-			<br>
-				Автор: Башлыкова А.А.
-		</p>
-		<a href="#" class="inline">
-			<button class="button">
-				<i class="fa fa-download"> </i> 
-				Скачать
-			</button>
-		</a>
-	</span>
 {% endblock %}
