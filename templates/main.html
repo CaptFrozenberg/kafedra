@@ -7,12 +7,12 @@
 {% block content %}	
 <!-- Header bar -->
 	<div id="header">
-		<div id="headerbutton">
+		<a id="headerbutton" href='/admin/'>
 			<button class="emptybutton">
 				<i class="fa fa-user"></i> 
 				Войти
 			</button>
-		</div>
+		</a>
 		<div class="inline">
 			<a href="#">
 				<img src="{% static 'images/logo_mirea.png' %}"/>
@@ -98,24 +98,17 @@
 			<span class="sidebar_title">
 				<i class="fa fa-file" id="sidebaricon"> </i>
 				Магистратура
-			</span>
-			<ul class="notab">			
-				<li class="sideli">
-					<div class="unseen">
-						<ul class="sub-menu">					
-						{% for subject in subjects_magistratura %}
-							<li class="sideli">
-								<a class="sidebar_link" href="{% url 'subject_name' subject=subject.code_name %}">
-									{{ subject.name }}
-								</a>
-							</li>						
-						{% endfor %}
-						</ul>
-					</div>
-				</li>			
-			</ul>			
-		</div>	
-        
+			</span>							
+				<ul class="sub-menu">					
+				{% for subject in subjects_magistratura %}
+					<li class="sideli">
+						<a class="sidebar_link" href="{% url 'subject_name' subject=subject.code_name %}">
+							{{ subject.name }}
+						</a>
+					</li>					
+				{% endfor %}
+				</ul>		
+		</div>        
 	</div>
 
 <!-- Main content of a page -->
