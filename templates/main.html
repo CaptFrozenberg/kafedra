@@ -37,27 +37,27 @@
 			</span>
 			<ul class="notab">
 				<li class="sideli">
-					<a class="sidebar_link" href="#">
+					<a class="sidebar_link" href="{% url 'main' %}">
 						О кафедре
 					</a>
 				</li>
 				<li class="sideli">
-					<a class="sidebar_link" href="#">
+					<a class="sidebar_link" href="{% url 'info_view' title='history.html' %}">
 						История кафедры
 					</a>
 				</li>
 				<li class="sideli">
-					<a class="sidebar_link" href="#">
+					<a class="sidebar_link" href="{% url 'info_view' title='materialtech.html' %}">
 						Материально-техническое обеспечение
 					</a>
 				</li>
 				<li class="sideli">
-					<a class="sidebar_link" href="#">
+					<a class="sidebar_link" href="{% url 'info_view' title='studywork.html' %}">
 						Учебная работа
 					</a>
 				</li>
 				<li class="sideli">
-					<a class="sidebar_link" href="#">
+					<a class="sidebar_link" href="{% url 'info_view' title='sciencework.html' %}">
 						Научная работа
 					</a>
 				</li>
@@ -105,7 +105,7 @@
                     <a class="sidebar_link" href="{% url 'subject_name' subject=subject.code_name %}">
                         {{ subject.name }}
                     </a>
-                </li>					
+                </li>			
             {% endfor %}
             </ul>		
 		</div>        
