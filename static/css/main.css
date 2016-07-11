@@ -45,12 +45,6 @@ button:active {
 	cursor: pointer;
 }
 
-li {
-	list-style: none;
-	padding: 3px 0;
-	font-size: 14px;
-}
-
 h1 {
 	color: #000;
 	font-size: 14px;
@@ -234,6 +228,7 @@ ul {
 	padding: 15px 0;
 	border-radius: 10px;
 	margin: 10px 0;
+	font-size: 14px;
 }
 
 .wrap > a {
@@ -265,4 +260,26 @@ ul {
 .emptybutton:active {
 	color: #fff;
 	background-color: rgba(1, 105, 178, 1);
+}
+
+.sideli {
+	list-style: none;
+	padding: 3px 0;
+	font-size: 14px;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 13px;
+}
+
+table > tbody > tr:nth-of-type(2n+1) {
+	background: #fafafa;
+}
+
+table > tbody > tr > td {
+	border: 1px solid #cdcdcd;
+	border-collapse: collapse;
+	padding: 8px;
 }
