@@ -18,9 +18,9 @@ def compare(docs, ext):
     for doc in docs:
         extension = doc.file.name.split('.')[-1]
         if extension in ext:
-            compared.append(('images/{0}.png'.format(extension), doc))
+            compared.append(('images/icons/{0}.png'.format(extension), doc))
         else:
-            compared.append(('images/no.png', doc))
+            compared.append(('images/icons/no.png', doc))
     return compared
 
 
