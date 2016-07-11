@@ -122,6 +122,15 @@ ul {
 	width: 20px;
 }
 
+#admin_logout {
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    background: #f6f6f6;
+    margin: 10% auto;
+    border-radius: 10px;
+}
+
 /* DEFINITIONS FOR CLASSES */
 
 .notab {
