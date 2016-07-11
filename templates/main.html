@@ -99,15 +99,15 @@
 				<i class="fa fa-file" id="sidebaricon"> </i>
 				Магистратура
 			</span>							
-				<ul class="sub-menu">					
-				{% for subject in subjects_magistratura %}
-					<li class="sideli">
-						<a class="sidebar_link" href="{% url 'subject_name' subject=subject.code_name %}">
-							{{ subject.name }}
-						</a>
-					</li>					
-				{% endfor %}
-				</ul>		
+            <ul class="notab">					
+            {% for subject in subjects_magistratura %}
+                <li class="sideli">
+                    <a class="sidebar_link" href="{% url 'subject_name' subject=subject.code_name %}">
+                        {{ subject.name }}
+                    </a>
+                </li>					
+            {% endfor %}
+            </ul>		
 		</div>        
 	</div>
 
