@@ -92,23 +92,30 @@
 				</li>
 			{% endfor %}				
 			</ul>			
-			
 		</div>	
-		<div class="sidebar">
+        
+        <div class="sidebar">
 			<span class="sidebar_title">
 				<i class="fa fa-file" id="sidebaricon"> </i>
-				Магистрам
+				Магистратура
 			</span>
-			<ul class="notab">
-			{% for subjeсt in subject_pack.0 %}
+			<ul class="notab">			
 				<li class="sideli">
-					<a class="sidebar_link" href="{#{% url 'subject_name' subject=subject.code_name %}#}">
-						{{ subject.name }}тут должно было быть название предмета {{subject.code_name}}
-					</a>
-				</li>
-			{% endfor %}
-			</ul>
-		</div>
+					<div class="unseen">
+						<ul class="sub-menu">					
+						{% for subject in subjects_magistratura %}
+							<li class="sideli">
+								<a class="sidebar_link" href="{% url 'subject_name' subject=subject.code_name %}">
+									{{ subject.name }}
+								</a>
+							</li>						
+						{% endfor %}
+						</ul>
+					</div>
+				</li>			
+			</ul>			
+		</div>	
+        
 	</div>
 
 <!-- Main content of a page -->
