@@ -24,5 +24,9 @@
 			</button>
 		</a>
 	</span>
+	{% empty %}
+	<span class='plaintext'>
+		К данному предмету еще не прикреплено ни одного документа.
+	</span>
 	{% endfor %}
 {% endblock %}
