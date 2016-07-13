@@ -13,13 +13,13 @@
         Вы успешно вышли с сайта.
     </p>
     <p>
-        <a href="/admin/">
+        <a href="{% url 'login' %}">
             <button>
                 Войти снова
             </button>
         </a>
         <a href="{% url 'main' %}" >
-            <button class="emptybutton">
+            <button>
                 На главную
             </button>
         </a>

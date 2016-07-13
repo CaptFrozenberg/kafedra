@@ -24,9 +24,9 @@
 	{% endif %}
 	{% if request.user.is_staff %}
 		<a id="headerbutton" href="/admin/">
-			<button class="emptybutton">
+			<button class="emptybutton" id="adminbutton">
 				<i class="fa fa-user"></i> 
-				Админ
+				Управление
 			</button>
 		</a>
 	{% endif %}

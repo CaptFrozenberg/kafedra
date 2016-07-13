@@ -63,6 +63,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	font-size: 13px;
+    width: 100%;
 }
 
 table > tbody > tr:nth-of-type(2n+1) {
@@ -141,6 +142,21 @@ table > tbody > tr > td {
 	width: 20px;
 }
 
+#adminbutton {
+    border: 1px solid #e30000;
+    color: #e30000;
+}
+
+#adminbutton:hover {
+    background: #e30000;
+    color: #fff;
+}
+
+#adminbutton:active {
+    background: #fff;
+    color: #e30000;
+}
+
 /* DEFINITIONS FOR CLASSES */
 
 .notab {
@@ -150,6 +166,7 @@ table > tbody > tr > td {
 
 .plaintext {
 	font-size: 13px;
+    line-height: 1.7em;
 }
 
 .inline {
@@ -277,8 +294,8 @@ table > tbody > tr > td {
 }
 
 .emptybutton:active {
-	color: #fff;
-	background-color: rgba(1, 105, 178, 1);
+	color: rgba(1, 105, 178, 1);
+	background-color: #fff;
 }
 
 .sideli {
@@ -305,10 +322,11 @@ table > tbody > tr > td {
 
 .loginform > p.text {
     font-size: 14px;
-    border-bottom: 1px solid #d7d8d0;
     border-top: 1px solid #d7d8d0;
+    border-bottom: 1px solid #d7d8d0;
+    width: 200px;
     padding: 15px;
-    margin: 25px;
+    margin: 25px auto;
 }
 
 .loginform > form > div > input {
