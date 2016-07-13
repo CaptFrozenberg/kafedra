@@ -30,13 +30,22 @@ class MainPageView(TemplateView, SubjectListMixin):
 
 class SubjectView(TemplateView, SubjectListMixin):
     template_name = 'subject.html'
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated():
+            self.show_masked = True
+        else:
+            self.show_masked = False
+        return super(SubjectView, self).get(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         self.subject_codename = self.kwargs['subject']
         context = super(SubjectView, self).get_context_data(**kwargs)
         subject = Subject.objects.get(code_name=self.subject_codename)
         context['subject_name'] = subject.name
-        context['docs'] = compare(Document.objects.filter(subject__code_name=self.subject_codename),SUPPORTED_EXTENSIONS)
+        if self.show_masked:
+            context['docs'] = compare(Document.objects.filter(subject__code_name=self.subject_codename),SUPPORTED_EXTENSIONS)
+        else:
+            context['docs'] = compare(Document.objects.filter(subject__code_name=self.subject_codename, masked=False),SUPPORTED_EXTENSIONS)
         return context
 
 class InfoView(TemplateView, SubjectListMixin):

@@ -12,9 +12,10 @@ class Subject(models.Model):
 class Document(models.Model):
     name = models.CharField(max_length=50, unique=True, verbose_name='Документ', db_index=True)
     subject = models.ForeignKey(Subject, verbose_name='Предмет')
-    kurs = models.PositiveSmallIntegerField(verbose_name= 'Курс')
+    kurs = models.PositiveSmallIntegerField(verbose_name='Курс')
     author = models.CharField(max_length=20, verbose_name='Автор')
     description = models.TextField()
+    masked = models.BooleanField(default=True, verbose_name='Скрытый')
     file = models.FileField(upload_to='docs')
 
     def __str__(self):

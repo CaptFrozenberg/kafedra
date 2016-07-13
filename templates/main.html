@@ -7,12 +7,29 @@
 {% block content %}	
 <!-- Header bar -->
 	<div id="header">
-		<a id="headerbutton" href='/admin/'>
+	{% if request.user.is_authenticated %}
+		<a id="headerbutton" href="{% url 'logout' %}">
+			<button class="emptybutton">
+				<i class="fa fa-user"></i> 
+				Выйти
+			</button>
+		</a>
+	{% else %}
+		<a id="headerbutton" href="{% url 'login' %}">
 			<button class="emptybutton">
 				<i class="fa fa-user"></i> 
 				Войти
 			</button>
 		</a>
+	{% endif %}
+	{% if request.user.is_staff %}
+		<a id="headerbutton" href="/admin/">
+			<button class="emptybutton">
+				<i class="fa fa-user"></i> 
+				Админ
+			</button>
+		</a>
+	{% endif %}
 		<div class="inline">
 			<a href="#">
 				<img src="{% static 'images/logo_mirea.png' %}"/>
