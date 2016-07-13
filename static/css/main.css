@@ -51,8 +51,28 @@ h1 {
 	text-transform: uppercase;
 }
 
+h2 {
+    font-weight: normal !important;
+}
+
 ul {
 	padding-left: 25px;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 13px;
+}
+
+table > tbody > tr:nth-of-type(2n+1) {
+	background: #fafafa;
+}
+
+table > tbody > tr > td {
+	border: 1px solid #cdcdcd;
+	border-collapse: collapse;
+	padding: 8px;
 }
 
 /* DEFINITIONS FOR IDS */
@@ -99,7 +119,6 @@ ul {
 	left: 40px;
 	top: -10px;
 	text-align: justify;
-
 }
 
 #footer {
@@ -120,15 +139,6 @@ ul {
 	opacity: 0.5;
 	font-size: 16px;
 	width: 20px;
-}
-
-#admin_logout {
-    width: 300px;
-    padding: 10px;
-    text-align: center;
-    background: #f6f6f6;
-    margin: 10% auto;
-    border-radius: 10px;
 }
 
 /* DEFINITIONS FOR CLASSES */
@@ -256,8 +266,8 @@ ul {
 
 .emptybutton {
 	border: 1px solid rgba(1, 105, 178, 1);
-	padding: 6px 12px;
-	background: #fff;
+	padding: 7px 12px;
+	background: transparent;
 	color: rgba(1, 105, 178, 1);
 }
 
@@ -277,18 +287,76 @@ ul {
 	font-size: 14px;
 }
 
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	font-size: 13px;
+/* LOGIN FORM */
+
+.loginform {
+    width: 300px;
+    padding: 5px;
+    text-align: center;
+    background: #f6f6f6;
+    margin: 10% auto;
+    border-top:	2px solid #BED5E5;
 }
 
-table > tbody > tr:nth-of-type(2n+1) {
-	background: #fafafa;
+.loginform > p + p > a {
+    display: inline-block;
+    margin: 5px 5px;
 }
 
-table > tbody > tr > td {
-	border: 1px solid #cdcdcd;
-	border-collapse: collapse;
-	padding: 8px;
+.loginform > p.text {
+    font-size: 14px;
+    border-bottom: 1px solid #d7d8d0;
+    border-top: 1px solid #d7d8d0;
+    padding: 15px;
+    margin: 25px;
+}
+
+.loginform > form > div > input {
+    cursor: pointer;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 14px;
+	padding: 12px 14px;
+	background: rgba(1, 105, 178, 0.5);
+    margin: 15px auto 15px auto;
+    width: 220px;
+}
+
+.loginform > form > div > input:hover {
+	background: rgba(1, 105, 178, 0.6);
+}
+
+.loginform > form > div > input:active {
+	background: rgba(1, 105, 178, 0.7);
+}
+
+.loginform > form > div.form-field {
+    width: 220px;
+    margin: auto;
+}
+
+.loginform > form > div.form-field > div.control {
+    width: 220px;
+}
+
+.loginform > form > div.form-field > div.control > input {
+    width: 200px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ececec;
+    padding: 10px;
+    background: #ececec;
+}
+
+.loginform > form > div.form-field > div.control > input:hover {
+    background: #fff;
+    border: 1px solid #fff;
+}
+
+.loginform > form > div.form-field > div.label {
+    font-size: 13px;
+    text-align: left;
+    color: #848484;
+    padding-bottom: 5px;
 }

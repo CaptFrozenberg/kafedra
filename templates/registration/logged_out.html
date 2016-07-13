@@ -2,12 +2,27 @@
 {% load staticfiles %}
 {% block additional_css %}
 <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+<link rel="stylesheet" href="{% static 'css/fa-min.css' %}" />
 {% endblock %}
 {% block ll %}
-<div id="admin_logout">
-  <h2>Выход</h2>
-  <p>Вы успешно выполнили процедуру выхода с сайта.</p>
-  <p><a href="/admin/"><center><button>Войти снова</button></center></a></p>
-  <p><a href="{% url 'main' %}">На главную страницу</a></p>
+<div class="loginform">
+    <h2>
+        Выход
+    </h2>
+    <p class="text">
+        Вы успешно вышли с сайта.
+    </p>
+    <p>
+        <a href="/admin/">
+            <button>
+                Войти снова
+            </button>
+        </a>
+        <a href="{% url 'main' %}" >
+            <button class="emptybutton">
+                На главную
+            </button>
+        </a>
+    </p>
 <div>
 {% endblock %}
