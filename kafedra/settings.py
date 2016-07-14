@@ -23,9 +23,9 @@ PROJECT_DIR = os.path.abspath(__file__)
 SECRET_KEY = '@2a*hr&7a9g&x2c!$lcc9%q-e_ky4ai6+9p=25#vgkuz4csm5w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
