@@ -43,9 +43,11 @@ class SubjectView(TemplateView, SubjectListMixin):
         subject = Subject.objects.get(code_name=self.subject_codename)
         context['subject_name'] = subject.name
         if self.show_masked:
-            context['docs'] = compare(Document.objects.filter(subject__code_name=self.subject_codename),SUPPORTED_EXTENSIONS)
+            context['docs'] = compare(Document.objects.filter(subject__code_name=self.subject_codename),
+                                      SUPPORTED_EXTENSIONS)
         else:
-            context['docs'] = compare(Document.objects.filter(subject__code_name=self.subject_codename, masked=False),SUPPORTED_EXTENSIONS)
+            context['docs'] = compare(Document.objects.filter(subject__code_name=self.subject_codename,
+                                                              masked=False),SUPPORTED_EXTENSIONS)
         return context
 
 class InfoView(TemplateView, SubjectListMixin):
