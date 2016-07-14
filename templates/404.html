@@ -1,0 +1,26 @@
+﻿{% extends "login_logout.html" %}
+{% load staticfiles %}
+{% block additional_css %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+<link rel="stylesheet" href="{% static 'css/fa-min.css' %}" />
+{% endblock %}
+{% block ll %}
+<div class="errpage">
+    <h2>
+        Ошибка 404
+    </h2>
+    <p>
+        Мы пытались найти страницу по адресу 
+            <b>{{ request_path }}</b>
+        , но у нас ничего не получилось!
+        <br />
+        Возможно, Вы что-то напутали. Попробуйте сделать следующее:
+        <br />
+    </p>
+    <a href="{% url 'main'%}">
+        <button>
+            Вернуться на главную страницу
+        </button>
+    </a>
+</div>
+{% endblock %}

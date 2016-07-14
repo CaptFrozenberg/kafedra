@@ -378,3 +378,19 @@ table > tbody > tr > td {
     color: #848484;
     padding-bottom: 5px;
 }
+
+/* ERROR PAGE */
+
+.errpage {
+	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', 
+	'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+.errpage > h2 {
+    font-size: 50px;
+    font-weight: bold!important;
+}
+
+.errpage > p {
+    font-size: 14px;
+}

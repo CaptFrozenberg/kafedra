@@ -1,0 +1,21 @@
+﻿{% extends "login_logout.html" %}
+{% load staticfiles %}
+{% block additional_css %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+<link rel="stylesheet" href="{% static 'css/fa-min.css' %}" />
+{% endblock %}
+{% block ll %}
+<div class="errpage">
+    <h2>
+        Ошибка 500
+    </h2>
+    <p>
+        Ой! Возникла непредвиденная ошибка. Пожалуйста, свяжитесь с разработчиками.
+    </p>
+    <a href="{% url 'main'%}">
+        <button>
+            Вернуться на главную страницу
+        </button>
+    </a>
+</div>
+{% endblock %}

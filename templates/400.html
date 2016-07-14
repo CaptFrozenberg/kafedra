@@ -1,0 +1,21 @@
+﻿{% extends "login_logout.html" %}
+{% load staticfiles %}
+{% block additional_css %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+<link rel="stylesheet" href="{% static 'css/fa-min.css' %}" />
+{% endblock %}
+{% block ll %}
+<div class="errpage">
+    <h2>
+        Ошибка 400
+    </h2>
+    <p>
+        Что-то не так с доменом. Попробуйте:
+    </p>
+    <a href="{% url 'main'%}">
+        <button>
+            Вернуться на главную страницу
+        </button>
+    </a>
+</div>
+{% endblock %}
